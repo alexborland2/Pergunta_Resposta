@@ -45,7 +45,7 @@ namespace Pergunta_Resposta
             // btnSend
             // 
             this.btnSend.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSend.Location = new System.Drawing.Point(604, 92);
+            this.btnSend.Location = new System.Drawing.Point(604, 89);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(107, 31);
             this.btnSend.TabIndex = 1;
@@ -64,6 +64,7 @@ namespace Pergunta_Resposta
             // 
             // Form1
             // 
+            this.AcceptButton = this.btnSend;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);

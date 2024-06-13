@@ -22,6 +22,7 @@ namespace Pergunta_Resposta
 
         private void btnSend_Click(object sender, EventArgs e)
         {
+            
             string userInput = txtInput.Text;
             string botResponse = chatBot.GetResponse(userInput);
             rtbChat.AppendText("Você: " + userInput + "\n");
@@ -34,6 +35,17 @@ namespace Pergunta_Resposta
             rtbChat.AppendText("Você: " + userInput + "\n");
             rtbChat.AppendText("Bot: " + botResponse + "\n");
             txtInput.Clear();*/
+        }
+
+        private void AppendTextToRichTextBox(string text)
+        {
+            if (InvokeRequired)
+            {
+                Invoke(new Action<string>(AppendTextToRichTextBox), new object[] { text });
+                return;
+            }
+
+            rtbChat.AppendText(text);
         }
         private string GetBotResponse(string input)
         {
